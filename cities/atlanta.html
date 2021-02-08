@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Weather Dashboard</title>
+<!-- added jquery -->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<!-- added bootstrap -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<!-- added my own internal stylesheet   -->
+<link rel= "stylesheet" href="../style.css">
+<!-- added google fonts -->
+<link href="https://fonts.googleapis.com/css?family=IM+Fell+Great+Primer+SC|Roboto+Mono&display=swap" rel="stylesheet">
+   </head>
+<body>
+
+  <div class="headliner"><h1>my.WeatherDashboard</h1>
+
+ </div>
+
+<!-- Added city search bar -->
+<div class="row">
+  <div class="col-sm-4 searchArea">
+  
+    <form action="" class="form-inline" method="get" name="searchform" target="_blank">
+    <input type="hidden" value="">
+    <input autocomplete="on" class="form-control mr-sm-2" name="q" placeholder=" " required="required" type="text" aria-label="Search">      
+    <button class="btn btn-primary" type="submit">Search</button>
+    </form> 
+         
+     
+          
+
+            <div class="featured1">
+            <div class="featured2">
+              <h3><p class="location5"><a>,</a>
+                <span id="datetime"></span><script>var dt = new Date();
+                  document.getElementById("datetime").innerHTML=dt.toLocaleString();
+                  </script>
+              <img class="icon1"></p></h3>
+              <div class="card-body">
+                <h5 class="card-title"></h5>
+                    <div class="weather-container1">
+                      <p class="temp5"></p>
+                      <p class="humidity5"></p>
+                      <p class="windSpeed5"></p>
+                      <p class="uVIndex5"></p>
+                      <a href="https://www.accuweather.com/en/us/atlanta/21202/weather-radar/348707" class="btn btn-primary"><strong>LIVE DOPPLER</strong></a>
+              </div></div>
+              <div class="card-footer text-muted">
+                Updated about 1 minute ago...
+              </div>
+            </div>
+            </div> 
+ 
+<!-- city list  -->
+<div class="city-list"> 
+  <div>
+<div class="cities"><a href="../../index.html">Denver</a><br></div>
+<div class="cities"><a href="chicago.html">Chicago</a><br></div>
+<div class="cities"><a href="newyork.html">New York</a><br></div>
+<div class="cities"><a href="austin.html">Austin</a><br></div>
+<div class="cities"><a href="orlando.html">Orlando</a><br></div>
+<div class="cities"><a href="seattle.html">Seattle</a><br></div>
+<div class="cities"><a href="atlanta.html">Atlanta</a><br></div>
+<div class="cities"><a href="sanfransisco.html">San Fransisco</a><br></div>
+</div>            
+</div> 
+<!-- Five day forecast -->
+
+<div class="forecast"><h2><b>Your 5-Day Forecast</b></h2>
+  <div class="forecast1">   
+    <p class="temp1"></p>
+    <img class="icon1">
+    <p class="windSpeed1"></p>
+    <p class="humidity1"></p>
+  </div>
+
+  <div class="forecast2"> 
+    <p class="temp2"></p>
+    <img class="icon2">
+    <p class="windSpeed2"></p>
+      <p class="humidity2"></p>
+  </div>
+
+  <div class="forecast3">
+    <p class="temp3"></p>
+    <img class="icon3">
+    <p class="windSpeed3"></p>
+    <p class="humidity3"></p>
+  </div>
+
+  <div class="forecast4">  
+    <p class="temp4"></p>
+    <img class="icon4">
+    <p class="windSpeed4"></p>
+    <p class="humidity4"></p>
+  </div>
+
+  <div class="forecast5">  
+    <p class="temp5"></p>
+    <img class="icon5">
+    <p class="windSpeed5"></p>
+    <p class="humidity5"></p>
+  </div>
+  </div></div></div>
+  <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+  <script src="../../Develop/script.js"></script>
+</body>
+</html>
