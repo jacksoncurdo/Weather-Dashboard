@@ -1,28 +1,121 @@
 <!DOCTYPE html>
- <html lang="en">
- <head>
+<html lang="en">
+
+<head>
      <meta charset="UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <meta http-equiv="X-UA-Compatible" content="ie=edge">
      <title>Weather Dashboard</title>
-<!-- added jquery -->
+     <!-- added jquery -->
      <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-<!-- added bootstrap -->
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-<!-- added my own internal stylesheet   -->
-     <link rel= "stylesheet" href="Develop/style.css">
-<!-- added google fonts -->
-<link href="https://fonts.googleapis.com/css?family=IM+Fell+Great+Primer+SC|Roboto+Mono&display=swap" rel="stylesheet">
-    </head>
- <body>
-  <div class="headliner"><h1>Weather Dashboard</h1>
-  </div>
+     <!-- added bootstrap -->
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+     <!-- added my own internal stylesheet   -->
+     <link rel="stylesheet" href="Develop/style.css">
+     <!-- added google fonts -->
+     <link href="https://fonts.googleapis.com/css?family=IM+Fell+Great+Primer+SC|Roboto+Mono&display=swap"
+          rel="stylesheet">
+</head>
 
-  <!-- Added city search bar -->
-<div class="row">
-     <div class="col-sm-4 searchArea">         
-       <form action="" class="form-inline" method="get" name="searchform" target="_blank">
-       <input type="hidden" value="">
-       <input autocomplete="on" class="form-control mr-sm-2" name="q" placeholder="Anytown, USA" required="required" type="text" aria-label="Search">      
-       <button class="btn btn-primary" type="submit">Search</button>
-       </form> 
+<body>
+     <div class="headliner">
+          <h1>Weather Dashboard</h1>
+     </div>
+
+     <!-- Added city search bar -->
+     <div class="row">
+          <div class="col-sm-4 searchArea">
+               <form action="" class="form-inline" method="get" name="searchform" target="_blank">
+                    <input type="hidden" value="">
+                    <input autocomplete="on" class="form-control mr-sm-2" name="q" placeholder="Anytown, USA"
+                         required="required" type="text" aria-label="Search">
+                    <button class="btn btn-primary" type="submit">Search</button>
+               </form>
+
+               <!-- Atlanta Weather featured -->
+               <div class="featured1">
+                    <div class="featured2">
+                         <h3>
+                              <p class="location1"><a>,</a>
+                                   <span id="datetime"></span>
+                                   <script>var dt = new Date();
+                                        document.getElementById("datetime").innerHTML = dt.toLocaleString(); 
+                                   </script>
+                                   <img class="icon1">
+                         </h3>
+                         <div class="card-body">
+                              <h5 class="card-title"></h5>
+                              <div class="weather-container1">
+                                   <p class="temp1"></p>
+                                   <p class="humidity1"></p>
+                                   <p class="windSpeed1"></p>
+                                   <p class="uVIndex1"></p>
+                                   <a href="https://www.accuweather.com/en/us/georgia/weather-radar"
+                                        class="btn btn-primary"><strong>LIVE DOPPLER</strong></a>
+                              </div>
+                         </div>
+                         <div class="card-footer text-muted">
+                              Updated about 1 minute ago...
+                         </div>
+                    </div>
+               </div>
+
+               <!-- city list  -->
+               <div class="city-list">
+                    <div>
+                         <div class="cities"><a href="index.html">Atlanta, GA</a><br></div>
+                         <div class="cities"><a href="assets/cities/anchorage.html">Anchorage, AK</a><br></div>
+                         <div class="cities"><a href="assets/cities/perth.html">Perth, Australia</a><br></div>
+                         <div class="cities"><a href="assets/cities/newhope.html">New Hope, PA</a><br></div>
+                         <div class="cities"><a href="assets/cities/baltimore.html">Baltimore, MD</a><br></div>
+                         <div class="cities"><a href="assets/cities/london.html">London, UK</a><br></div>
+                         <div class="cities"><a href="assets/cities/paris.html">Paris, France</a><br></div>
+                    </div>
+               </div>
+
+               <!-- Five day forecast -->
+
+               <div class="forecast">
+                    <h2><b>Your 5-Day Forecast</b></h2>
+                    <div class="forecast1">
+                         <p class="temp1"></p>
+                         <p> <img class="icon1"></p>
+                         <p class="windSpeed1"></p>
+                         <p class="humidity1"></p>
+                    </div>
+
+                    <div class="forecast2">
+                         <p class="temp2"></p>
+                         <img class="icon2">
+                         <p class="windSpeed2"></p>
+                         <p class="humidity2"></p>
+                    </div>
+
+                    <div class="forecast3">
+                         <p class="temp3"></p>
+                         <img class="icon3">
+                         <p class="windSpeed3"></p>
+                         <p class="humidity3"></p>
+                    </div>
+
+                    <div class="forecast4">
+                         <p class="temp4"></p>
+                         <img class="icon4">
+                         <p class="windSpeed4"></p>
+                         <p class="humidity4"></p>
+                    </div>
+
+                    <div class="forecast5">
+                         <p class="temp5"></p>
+                         <img class="icon5">
+                         <p class="windSpeed5"></p>
+                         <p class="humidity5"></p>
+                    </div>
+               </div>
+          </div>
+          <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+          <script src="assets/script.js"></script>
+</body>
+
+</html>
