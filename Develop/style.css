@@ -1,0 +1,72 @@
+h1{
+    margin:0px
+}
+
+body{
+margin: 0px;
+font-family: sans-serif;
+}
+
+.city-input{
+    border:0px;
+    background-color: blue;
+    padding: 10px;
+    color: whitesmoke;
+    display:block;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    width: 100%;
+    text-align: center;
+}
+input{
+    padding:8px 0px 8px 0px ;
+}
+
+#container{
+    display: grid;
+    grid-template-columns:2fr 7fr;
+    grid-gap: 30px;
+    background-color: #ccc;
+    max-width: 900px;
+    margin: auto;
+    margin-top: 30px;
+    padding: 30px;
+}
+
+#day-grid{
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 15px;
+}
+
+#day-grid > div{
+    background-color: blue;
+    color: whitesmoke;
+    padding: 5px;
+    border: 5px solid black;
+}
+
+#current-day img {
+    margin-top: -25px; 
+       
+  }
+
+  #current-day h1 {
+      float:left;
+      padding: 10px;
+    
+  }
+
+  .search-button{
+      display: inline;
+      border:0px;
+      background-color: blue;
+      padding: 10px;
+      color: whitesmoke;
+      margin-bottom: 10px;
+      border-radius: 0px 10px 10px 0px;
+      
+  }
+  input{
+    border-radius: 10px 0px 0px 10px;
+  }
