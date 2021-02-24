@@ -1,4 +1,5 @@
 # Weather-Dashboard
+<img src="./Images/WD.jpg.JPG">
 
 ## Project Description 
 This project features a weather dashboard where users can access the current weather and the 5 day forecast for any given city at any given time. This project was built using HTML, CSS, and Javascript. 

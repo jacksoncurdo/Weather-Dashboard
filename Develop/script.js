@@ -4,16 +4,6 @@ document.querySelector("#search-form").addEventListener("submit", function (even
     event.preventDefault()
     var searchTerm = document.querySelector("#search-term").value
     weatherSearch(searchTerm)
-    var citySaver = []
-
-    if (JSON.parse(localStorage.getItem(`searchTerm`))) {
-        citySaver = JSON.parse(localStorage.getItem(`searchTerm`))
-    }
-
-    citySaver.push(searchTerm)
-    localStorage.setItem(`searchTerm`, JSON.stringify(citySaver))
-    // i think all my problems are in this block. switched out lines 11, 12, and 16 between cities searched and search term. fixed issue one. issue two still persists
-    displayButtons()
 });
 displayButtons()
 
@@ -76,33 +66,4 @@ function weatherSearch(selectedCity) {
             document.querySelector("#current-day").appendChild(humidity)
             document.querySelector("#current-day").appendChild(windSpeed)
         })
-}
-
-function displayButtons() {
-    var dataDisplay = []
-
-    if (JSON.parse(localStorage.getItem(`searchTerm`))) {
-        dataDisplay = JSON.parse(localStorage.getItem(`searchTerm`))
-        // i changed these so m any times i dont even know, i think they were originally cities-searched
-    }
-
-    document.querySelector("#cities-searched").innerHTML = ""
-
-    for (let i = 0; i < dataDisplay.length; i++) {
-        var cityInput = document.createElement(`button`)
-        cityInput.innerText = dataDisplay[i]
-        // THE PROBLEM WAS THAT I HAD DATA INSTEAD OF DATADISPLAY!!!!!
-        cityInput.classList.add(`city-input`)
-        document.querySelector(`#cities-searched`).appendChild(cityInput)
-        // technically the issue is here because these buttons never get created?
-    }
-
-    document.querySelectorAll(`.city-input`).forEach(element => {
-        element.addEventListener(`click`, function (event) {
-            var cityInput = event.target.innerText
-            weatherSearch(cityInput)
-            // i think lines 104 and 105 are causing issues
-            
-        })
-    });
 }
